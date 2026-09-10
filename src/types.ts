@@ -1,0 +1,11 @@
+export type Role='customer'|'admin_super'|'admin'|'editor'|'viewer';
+export interface Category{id:string;created_at?:string;name_ar:string;image_url:string|null;sort_order:number}
+export interface Product{id:string;created_at?:string;name_ar:string;description_ar:string|null;price:number;category_id:string|null;image_url:string|null;brand_ar:string|null;model:string|null;specifications_ar:string|null;warranty_ar:string|null;is_available:boolean;is_featured:boolean;is_best_seller:boolean;sort_order:number;supplier_id:string|null;gallery?:string[]}
+export interface Supplier{id:string;created_at?:string;name_ar:string;description_ar:string|null;logo_url:string|null;phone:string|null;address_ar:string|null;is_active:boolean;sort_order:number}
+export interface Customer{id:string;created_at?:string;full_name_ar:string|null;phone:string|null;email:string|null;user_id:string;is_active:boolean}
+export interface CartItem{id:string;created_at?:string;user_id:string;product_id:string;quantity:number;product?:Product}
+export type OrderStatus='pending'|'confirmed'|'shipped'|'delivered'|'cancelled';
+export interface Order{id:string;created_at:string;user_id:string|null;address_id:string|null;total_amount:number;status:OrderStatus;payment_method:string|null;payment_status:string|null;notes:string|null;cod_approved:boolean;order_items?:OrderItem[]}
+export interface OrderItem{id:string;created_at?:string;order_id:string;product_id:string|null;quantity:number;unit_price:number}
+export interface Offer{id:string;created_at?:string;updated_at?:string;product_id:string;old_price:number;offer_price:number;title_ar:string|null;description_ar:string|null;start_at:string;end_at:string;is_active:boolean;product?:Product}
+export interface ReadySystem{product:Product;categoryName:string}

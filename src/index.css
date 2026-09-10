@@ -1,0 +1,2 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+html,body,#root{min-height:100%;margin:0} body{font-family:Arial,Tahoma,sans-serif;background:#f8fafc;color:#0f172a;-webkit-tap-highlight-color:transparent}.no-scrollbar::-webkit-scrollbar{display:none}.no-scrollbar{scrollbar-width:none}.gold-gradient{background:linear-gradient(135deg,#fcd34d,#f59e0b,#d97706)}.shadow-glow{box-shadow:0 8px 30px rgba(245,158,11,.2)}

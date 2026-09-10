@@ -1,0 +1,2 @@
+-- Offers are part of the final schema now. For a fresh database use supabase/schema.sql.
+-- For an existing database, add the offers table from the corresponding section in schema.sql.
